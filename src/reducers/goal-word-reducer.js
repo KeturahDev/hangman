@@ -1,4 +1,5 @@
 export default (state = {}, action) => {
+  return state;
   //state comparison .. inputted letter... action: check for include
 }
 
