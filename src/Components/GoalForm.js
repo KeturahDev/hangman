@@ -2,14 +2,14 @@ import React from "react";
 // import { v4 } from 'uuid';
 import PropTypes from "prop-types";
 
-function GuessForm(props){
+function GoalForm(props){
   const formStyle = {
     border: "2px solid yellow"
   }
 
-  // function handleGuessFormSubmission(event) {
+  // function handleGoalFormSubmission(event) {
   //   event.preventDefault();
-  //   props.onGuess({letterGuessed: event.target.letter.value, id: event.target.letter.value});
+  //   props.onGoalSubmit({goalWord: event.target.goalWord.value, id: event.target.letter.value});
   // }
 
   return (
@@ -18,8 +18,8 @@ function GuessForm(props){
       <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
-          name='letter'
-          placeholder='Letter' />
+          name='goalWord'
+          placeholder='Enter your word' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </div>
@@ -27,9 +27,9 @@ function GuessForm(props){
   );
 }
 
-GuessForm.propTypes = {
-  formSubmissionHandler: PropTypes.func,
-  onGuess: PropTypes.func
+GoalForm.propTypes = {
+  // formSubmissionHandler: PropTypes.func,
+  buttonText: PropTypes.string
 };
 
-export default GuessForm;
+export default GoalForm;
