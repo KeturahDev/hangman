@@ -2,6 +2,7 @@ thinking state
 
 - Goal word (compare letter inputs and enact functionality based on if its included in the goal word or not... CORRECT: toggle visibility of letter from dash WRONG: add input to list of wrong letters, and decrement guesses left)
 
+w
 
 # Hangman
 
