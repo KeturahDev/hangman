@@ -1,7 +1,15 @@
 export default (state = {}, action) => {
-  return state;
+  switch (action.type) {
+    case 'SET_GOALWORD':
+      const { word } = action;
+      return Object.assign({}, state, {
+        word: word
+      });
+    default:
+      return state;
+  }
   //state comparison .. inputted letter... action: check for include
-}
+};
 
 // Redux States:
 // -----------
