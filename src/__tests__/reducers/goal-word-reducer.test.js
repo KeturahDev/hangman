@@ -21,5 +21,10 @@ describe("goalWordReducer", () => {
       word: "Testword"
     })
   });
+
+  test("Should return true if user's input is included in goal word", () => {
+    
+    expect(goalWordReducer({}, action)).toEqual({ word: "Testword", included: true })
+  })
 });
 
