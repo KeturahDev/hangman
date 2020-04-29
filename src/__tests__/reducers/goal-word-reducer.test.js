@@ -23,7 +23,6 @@ describe("goalWordReducer", () => {
       word: "Testword"
     })
   });
-
 });
 
 describe("letterCheckReducer", () => {
