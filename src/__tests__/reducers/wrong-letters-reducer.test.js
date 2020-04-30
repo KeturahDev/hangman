@@ -11,6 +11,12 @@ describe("wrongLettersReducer", () => {
       type: "ADD_LETTER",
       letter: userInput
     }
-    expect(wrongLettersReducer({}, action)).toEqual({ "k":"k" })
+    expect(wrongLettersReducer({}, action)).toEqual({ "k": { letter: "k"} })
+  })
+  test("Should return list of wrong letters", () => {
+    expect(wrongLettersReducer({}, action)).toEqual({
+      "k": { letter: "k"},
+      "z": { letter: "z"}
+    })
   })
 })
