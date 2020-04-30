@@ -38,3 +38,4 @@ describe("letterCheckReducer", () => {
     expect(letterCheckReducer({}, action)).toEqual({ included: true })
   })
 })
+///test

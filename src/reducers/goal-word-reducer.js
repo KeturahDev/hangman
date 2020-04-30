@@ -1,7 +1,7 @@
-export default (state = {}, action) => {
+export default (state = {}, action) => { 
   switch (action.type) {
     case 'SET_GOALWORD':
-      const { word } = action;
+      const { word } = action;  
       return Object.assign({}, state, {
         word: word
       });

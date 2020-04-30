@@ -1,4 +1,5 @@
 import React from 'react';
+import GuessForm from "./GuessForm"
 import {connect} from "react-redux";
 // 
 // - GuessWrongcol mapping for WrongLetters : PASS [WRONG LETTER STATE] stateslice: wrong letters
@@ -9,40 +10,68 @@ import {connect} from "react-redux";
 class Controller extends React.Component {
   constuctor(props){
     super(props);
+    this.state ={
+      isGuessFormVisible: false
+    }
   }
 
-  handleClick = () => {
-    const { dispatch } = this.props;
-    const action = a.toggleForm();
-    dispatch(action);
+  // handleClick = () => {
+  //   const { dispatch } = this.props;
+  //   const action = a.toggleForm();
+  //   dispatch(action);
+  // }
+
+  handleSetGoalWord = (goalWord) => {
+    //make an action, pass goalword into it
+    // getState.goalWord(action)
   }
+
+  handleCheckInclusion = (guessedLetter) => {
+    //getGoalWord
+    // cons isIncluded = action {goalword, guessed letter, type: isIncluded} - true/false
+    if(isIncluded = true) {
+      this.props.onCorrectGuess 
+    }
+  }
+
 
   setVisibility = () => {
-    if(getState... goalformvisible... true) {
-      return {
-        component: <GoalForm/>
-      }
+    if(this.state.isGuessFormVisible === false) {
+      return { component: <GoalForm onSettingGoalWord={this.handleSetGoalWord}/>}
+    } else {
+      return { component:
+        <div>
+          <GuessForm functionthatreturnsguessedletter={this.handleCheckInclusion} />
+          <GuessedWrongCol />
+          <WordToGuess letterGuessed={} />
+        </div>}
     }
   }
 
   render(){
-    currentlyVisibleComponent = setVisibility()
+    currentlyVisible = setVisibility()
     return(
       <React.Fragment>
         <div>
-          {currentlyVisibleComponent}
+          {currentlyVisible.component}
         </div>
       </React.Fragment>
     );
   }
 }
 const mapStateToProps = state => {
-  goalWord:  state.goalWord
-  letterIsIncluded:  state.letterIsIncluded
-  wrongLetters:  state.wrongLetters
-  isGuessFormVisible:  state.isGuessFormVisible
+  return {
+    goalWord:  state.goalWord,
+    letterIsIncluded:  state.letterIsIncluded,
+    wrongLetters:  state.wrongLetters,
+    isGuessFormVisible:  state.isGuessFormVisible
+  }
 }
 
 Controller = connect(mapStateToProps)(Controller)
+
+Controller.propTypes = {
+  onCorrectGuess = PropTypes.func
+}
 
 export default Controller;

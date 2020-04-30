@@ -5,15 +5,24 @@ import GuessForm from './Components/GuessForm';
 import GuessedWrongCol from './Components/GuessedWrongCol';
 import WordToGuess from './Components/WordToGuess';
 
-function App() {
-  return (
-    <React.Fragment>
-      <Header />
-      <GuessForm />
-      <GuessedWrongCol />
-      <WordToGuess />
-    </React.Fragment>
-  );
+class App extends React.Component() {
+  constructor(props) {
+    super(props)
+  }
+
+  handlePassCorrectLetter = (letter) => {
+    //
+  }
+
+  render(){
+    return (
+      <React.Fragment>
+        <Header />
+        <Controller onCorrectGuess={handlePassCorrectLetter}/>
+        
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
