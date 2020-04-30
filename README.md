@@ -5,10 +5,9 @@
 ## Description
 
 _This application is a hang man game, built using React and Redux._
-_Deployed on [GitHub Pages](GH PAGES LINK)_
 
 ## Component Tree / Wireframe
-![component tree](ComponentTree.jpg)
+<img width="811" alt="sc" src="https://user-images.githubusercontent.com/32975967/80763746-12c86e00-8af4-11ea-8626-0d8f0453a6be.png">
 
 ## Specification User Stories
 * As a user...
