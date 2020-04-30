@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from "react-redux";
 // 
 // - GuessWrongcol mapping for WrongLetters : PASS [WRONG LETTER STATE] stateslice: wrong letters
 // - GuessesLeft number decrements for ever WRONG LETTER STATE ... count feature in that state stateslice: wrong letters count
@@ -8,6 +9,12 @@ import React from 'react';
 class Controller extends React.Component {
   constuctor(props){
     super(props);
+  }
+
+  handleClick = () => {
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
+    dispatch(action);
   }
 
   setVisibility = () => {
@@ -29,3 +36,13 @@ class Controller extends React.Component {
     );
   }
 }
+const mapStateToProps = state => {
+  goalWord:  state.goalWord
+  letterIsIncluded:  state.letterIsIncluded
+  wrongLetters:  state.wrongLetters
+  isGuessFormVisible:  state.isGuessFormVisible
+}
+
+Controller = connect(mapStateToProps)(Controller)
+
+export default Controller;

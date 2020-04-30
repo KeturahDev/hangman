@@ -10,7 +10,8 @@ describe("rootReducer", () => {
     expect(rootReducer({}, { type: null })).toEqual({
         goalWord: {},
         letterIsIncluded: false,
-        wrongLetters: {}
+        wrongLetters: {},
+        isGuessFormVisible: false
     });
   });
 
