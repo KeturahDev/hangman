@@ -1,0 +1,4 @@
+export const SET_GOALWORD = "SET_GOALWORD";
+export const CHECK_INCLUSION = "CHECK_INCLUSION";
+export const ADD_LETTER = "ADD_LETTER";
+export const TOGGLE_FORM = "TOGGLE_FORM";
