@@ -13,4 +13,19 @@ describe('hangman actions', () => {
     });
   });
 
+  it('checkInclusion should create CHECK_INCLUSION action', () => {
+    expect(actions.checkInclusion({userInput: "k", goalWord: "kite"})).toEqual({
+      type: 'CHECK_INCLUSION',
+      userInput: "k",
+      goalWord: "kite"
+    });
+  });
+
+    it('addLetter should create ADD_LETTER action', () => {
+    expect(actions.addLetter({letter: "k"})).toEqual({
+      type: 'ADD_LETTER',
+      letter: 'k'
+    });
+  });
+
 });
