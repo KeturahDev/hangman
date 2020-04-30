@@ -9,7 +9,8 @@ describe("rootReducer", () => {
   test("Should return same default state as original reducer", () => {
     expect(rootReducer({}, { type: null })).toEqual({
         goalWord: {},
-        letterIsIncluded: false
+        letterIsIncluded: false,
+        wrongLetters: {}
     });
   });
 
